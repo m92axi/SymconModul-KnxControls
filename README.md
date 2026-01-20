@@ -12,7 +12,7 @@ Folgende Module beinhaltet diese Bibliothek:
 
 ## Versionshistorie
 
-- 1.0: Initialversion
+- 0.6: erste öffntliche Testversion auf gitghub
 
 ## Hinweis
 
