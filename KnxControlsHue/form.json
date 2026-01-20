@@ -1,0 +1,373 @@
+{
+    "elements": [
+        {
+            "type": "SelectInstance",
+            "name": "HueInstanceID",
+            "caption": "Hue Light Instance"
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "KNX Variables",
+            "download": "",
+            "expanded": true,
+            "items": [
+                {
+                    "type": "List",
+                    "name": "KnxSceneInputs",
+                    "caption": "KNX Scene Inputs",
+                    "rowCount": 3,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Scene Number Variable ID",
+                            "name": "SceneNumberID",
+                            "width": "45%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        },
+                        {
+                            "caption": "Control Variable ID",
+                            "name": "ControlID",
+                            "width": "45%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [0]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "KnxSwitchInputs",
+                    "caption": "KNX Switch Inputs",
+                    "rowCount": 3,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Switch Variable ID",
+                            "name": "SwitchID",
+                            "width": "90%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [0]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "KnxDimInputs",
+                    "caption": "KNX Dim Inputs",
+                    "rowCount": 3,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Dim Direction Variable ID",
+                            "name": "DimDirectionID",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [0]
+                            }
+                        },
+                        {
+                            "caption": "Dim Step/Stop Variable ID",
+                            "name": "DimStepID",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        },
+                        {
+                            "caption": "Dim Switch Direction Variable ID",
+                            "name": "DimSwitchDirectionID",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "KnxTwInputs",
+                    "caption": "KNX Tunable White Inputs",
+                    "rowCount": 3,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Color Temperature Variable ID (Kelvin)",
+                            "name": "TwID",
+                            "width": "90%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "KnxTwDimInputs",
+                    "caption": "KNX Tunable White Dim Inputs",
+                    "rowCount": 3,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "TW Direction Variable ID",
+                            "name": "TwDirectionID",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [0]
+                            }
+                        },
+                        {
+                            "caption": "TW Step/Stop Variable ID",
+                            "name": "TwStepID",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        },
+                        {
+                            "caption": "TW Switch Direction Variable ID",
+                            "name": "TwSwitchDirectionID",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "KnxColorInputs",
+                    "caption": "KNX Color Inputs",
+                    "rowCount": 3,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Color Variable ID (RGB)",
+                            "name": "ColorID",
+                            "width": "90%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [1]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Label",
+                    "caption": "Feedback Variables"
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "KnxFeedbackStatusID",
+                    "caption": "Feedback Status (On/Off)",
+                    "validVariableTypes": [0]
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "KnxFeedbackBrightnessID",
+                    "caption": "Feedback Brightness (0-100%)",
+                    "validVariableTypes": [1]
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "KnxFeedbackColorID",
+                    "caption": "Feedback Color (RGB)",
+                    "validVariableTypes": [1]
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "KnxFeedbackColorTemperatureID",
+                    "caption": "Feedback Color Temperature",
+                    "validVariableTypes": [1]
+                }
+            ],
+            "link": false,
+            "name": "KnxVariablesPanel",
+            "onClick": "",
+            "visible": true,
+            "width": ""
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Settings",
+            "download": "",
+            "expanded": true,
+            "items": [
+                {
+                    "type": "Label",
+                    "bold": false,
+                    "caption": "Dimming Settings",
+                    "color": 0,
+                    "italic": false,
+                    "link": true,
+                    "name": "DimSettingLab",
+                    "underline": true,
+                    "visible": true,
+                    "width": ""
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "DimStep",
+                    "caption": "Dimming Step (0-100)",
+                    "minimum": 1,
+                    "maximum": 100,
+                    "suffix": "",
+                    "value": 8
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "DimInterval",
+                    "caption": "Dimming Interval (ms)",
+                    "minimum": 50,
+                    "maximum": 2000,
+                    "suffix": "ms",
+                    "value": 100
+                },
+                {
+                    "type": "Label",
+                    "bold": false,
+                    "caption": "Tunable White Settings",
+                    "color": 0,
+                    "italic": false,
+                    "link": true,
+                    "name": "TwSettingLab",
+                    "underline": true,
+                    "visible": true,
+                    "width": ""
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "TwStep",
+                    "caption": "TW Step (Mireds)",
+                    "minimum": 1
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "TwInterval",
+                    "caption": "TW Interval (ms)",
+                    "minimum": 50,
+                    "maximum": 2000,
+                    "suffix": "ms"
+                },
+                {
+                    "type": "Label",
+                    "bold": false,
+                    "caption": "Scene Settings",
+                    "color": 0,
+                    "italic": false,
+                    "link": true,
+                    "name": "ScenSettingLab",
+                    "underline": true,
+                    "visible": true,
+                    "width": ""
+                },
+                {
+                    "type": "CheckBox",
+                    "name": "AutoCreateUnknownScenes",
+                    "caption": "Auto create unknown scenes",
+                    "value": true
+                },
+                {
+                    "type": "CheckBox",
+                    "name": "AutoActivateNewScenes",
+                    "caption": "Auto activate new scenes",
+                    "value": false
+                },
+                {
+                    "type": "Button",
+                    "caption": "Import Profile Scenes",
+                    "onClick": "KCH_ImportProfileScenes($id);"
+                },
+                {
+                    "type": "List",
+                    "name": "SceneMapping",
+                    "caption": "Scene Mapping",
+                    "rowCount": 10,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Active",
+                            "name": "Active",
+                            "width": "50px",
+                            "add": true,
+                            "edit": {
+                                "type": "CheckBox"
+                            }
+                        },
+                        {
+                            "caption": "KNX Scene No. (1-64)",
+                            "name": "KnxNumber",
+                            "width": "170px",
+                            "add": 1,
+                            "edit": {
+                                "type": "NumberSpinner",
+                                "minimum": 1,
+                                "maximum": 64
+                            }
+                        },
+                        {
+                            "caption": "Color",
+                            "name": "Color",
+                            "width": "100px",
+                            "add": 16777215,
+                            "edit": {
+                                "type": "SelectColor"
+                            }
+                        },
+                        {
+                            "caption": "Brightness (0-100%)",
+                            "name": "Brightness",
+                            "width": "30%",
+                            "add": 100,
+                            "edit": {
+                                "type": "NumberSpinner",
+                                "minimum": 0,
+                                "maximum": 100
+                            }
+                        }
+                    ]
+                }
+            ],
+            "link": false,
+            "name": "SettingsPanel",
+            "onClick": "",
+            "visible": true,
+            "width": ""
+        }
+
+    ],
+    "actions": [
+    ],
+    "status": [
+    ]
+}

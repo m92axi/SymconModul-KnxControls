@@ -1,0 +1,16 @@
+{
+    "id": "{1FD4A2AB-097C-959D-DAB8-92EADDBB9E6B}",
+    "name": "KnxControlsSonos",
+    "url": "https://symcon.com",
+    "type": 3,
+    "vendor": "",
+    "aliases": [
+    ],
+    "parentRequirements": [
+    ],
+    "childRequirements": [
+    ],
+    "implemented": [
+    ],
+    "prefix": "KCS"
+}

@@ -1,0 +1,321 @@
+{
+    "elements": [
+        {
+            "type": "SelectInstance",
+            "caption": "Select Sonos instance",
+            "download": "",
+            "enabled": true,
+            "link": false,
+            "name": "SelectSonosInstanz",
+            "onChange": "",
+            "validModules": "[{52F6586D-A1C7-AAC6-309B-E12A70F6EEF6}]",
+            "value": 0,
+            "visible": true,
+            "width": "600px"
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "KNX Inputs",
+            "download": "",
+            "expanded": true,
+            "items": [
+                {
+                    "type": "List",
+                    "name": "PlayPauseInputs",
+                    "caption": "Play/Pause Inputs",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Variable",
+                            "name": "VariableID",
+                            "width": "auto",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "type": "List",
+                    "name": "MuteInputs",
+                    "caption": "Mute Inputs",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Variable",
+                            "name": "VariableID",
+                            "width": "auto",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "VolumeInputs",
+                    "caption": "Volume Inputs (Absolute %)",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Variable",
+                            "name": "VariableID",
+                            "width": "auto",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "type": "List",
+                    "name": "RelativeVolumeInputs",
+                    "caption": "Relative Volume Inputs (Dimming)",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Step/Stop (4-Bit)",
+                            "name": "StepStopVariable",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    1
+                                ]
+                            }
+                        },
+                        {
+                            "caption": "Direction (1-Bit)",
+                            "name": "DirectionVariable",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "caption": "Switch Direction (1-Bit)",
+                            "name": "SwitchDirectionVariable",
+                            "width": "30%",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "type": "List",
+                    "name": "SceneInputs",
+                    "caption": "Scene Inputs",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Variable",
+                            "name": "VariableID",
+                            "width": "auto",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectVariable",
+                                "validVariableTypes": [
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "visible": true
+                }
+            ],
+            "link": false,
+            "name": "KNX_InputsPanel",
+            "onClick": "",
+            "visible": true,
+            "width": ""
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Feedback",
+            "download": "",
+            "expanded": true,
+            "items": [
+                {
+                    "type": "SelectVariable",
+                    "name": "KNX_StatusFeedback",
+                    "caption": "Status Feedback (Play/Pause)",
+                    "width": "600px",
+                    "validVariableTypes": [
+                        0
+                    ],
+                    "visible": true
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "KNX_MuteFeedback",
+                    "caption": "Mute Feedback",
+                    "width": "600px",
+                    "validVariableTypes": [
+                        0
+                    ],
+                    "visible": true
+                },
+                {
+                    "type": "SelectVariable",
+                    "name": "KNX_VolumeFeedback",
+                    "caption": "Volume Feedback (%)",
+                    "width": "600px",
+                    "validVariableTypes": [
+                        1
+                    ],
+                    "visible": true
+                }
+            ],
+            "link": false,
+            "name": "FeedbackPanel",
+            "onClick": "",
+            "visible": true,
+            "width": ""
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Settings",
+            "download": "",
+            "expanded": true,
+            "items": [
+                {
+                    "type": "NumberSpinner",
+                    "caption": "Step size for volume change",
+                    "digits": 0,
+                    "enabled": true,
+                    "hex": false,
+                    "maximum": 10,
+                    "minimum": 1,
+                    "moreDigits": false,
+                    "name": "StepSize",
+                    "onChange": "",
+                    "suffix": "",
+                    "value": 0,
+                    "visible": true,
+                    "width": "300px"
+                },
+                {
+                    "type": "Select",
+                    "name": "SelectedStation",
+                    "caption": "Select default Station/Playlist",
+                    "options": [],
+                    "visible": true,
+                    "width": "600px"
+                },
+                {
+                    "type": "List",
+                    "name": "StationMapping",
+                    "caption": "Station Scene Number Mapping",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Number",
+                            "name": "StationNumber",
+                            "width": "100px",
+                            "add": 1,
+                            "edit": {
+                                "type": "NumberSpinner"
+                            }
+                        },
+                        {
+                            "caption": "Station Name",
+                            "name": "StationName",
+                            "width": "auto",
+                            "add": "",
+                            "edit": {
+                                "type": "Select",
+                                "options": []
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "List",
+                    "name": "UrlMapping",
+                    "caption": "Notification Sounds URL Scene Number Mapping",
+                    "rowCount": 5,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Number",
+                            "name": "UrlNumber",
+                            "width": "100px",
+                            "add": 10,
+                            "edit": {
+                                "type": "NumberSpinner"
+                            }
+                        },
+                        {
+                            "caption": "URL of audio file",
+                            "name": "FileUrl",
+                            "width": "500px",
+                            "add": "https://filesamples.com/samples/audio/mp3/sample3.mp3",
+                            "edit": {
+                                "type": "ValidationTextBox",
+                                "validate": "^https?://.+\\.(mp3|mp4|m4a|wma|wav|aac|ogg)$"
+                            }
+                        },
+                        {
+                            "caption": "Volume Change",
+                            "name": "VolumeChnge",
+                            "width": "auto",
+                            "add": "0",
+                            "edit": {
+                                "type": "ValidationTextBox",
+                                "validate": "^[+\\-]?\\d+$"
+                            }
+                        }
+
+                    ]
+                }
+            ],
+            "link": false,
+            "name": "SettingsPanel",
+            "onClick": "",
+            "visible": true,
+            "width": ""
+        }
+    ],
+    "actions": [
+    ],
+    "status": [
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "id": "{58EA768E-1511-F582-C832-247460338827}",
+    "name": "KnxControlsHue",
+    "url": "https://symcon.de",
+    "type": 3,
+    "vendor": "",
+    "aliases": [
+    ],
+    "parentRequirements": [
+    ],
+    "childRequirements": [
+    ],
+    "implemented": [
+    ],
+    "prefix": "KCH"
+}
