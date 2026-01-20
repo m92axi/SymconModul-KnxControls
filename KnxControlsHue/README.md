@@ -6,13 +6,11 @@ Es ermöglicht die vollständige Steuerung (Schalten, Dimmen, Farbe, Farbtempera
 ### Inhaltsverzeichnis
 
 1. [Funktionsumfang](#1-funktionsumfang)
-2. [Voraussetzungen](#2-voraussetzungen)
-3. [Software-Installation](#3-software-installation)
-4. [Einrichten der Instanzen in IP-Symcon](#4-einrichten-der-instanzen-in-ip-symcon)
-5. [Statusvariablen und Profile](#5-statusvariablen-und-profile)
-6. [WebFront](#6-webfront)
-7. [PHP-Befehlsreferenz](#7-php-befehlsreferenz)
-8. [Hinweis](#8-hinweis)
+2. [Einrichten der Instanzen in IP-Symcon](#2-einrichten-der-instanzen-in-ip-symcon)
+3. [Statusvariablen und Profile](#3-statusvariablen-und-profile)
+4. [WebFront](#4-webfront)
+5. [PHP-Befehlsreferenz](#5-php-befehlsreferenz)
+6. [Hinweis](#6-hinweis)
 
 ### 1. Funktionsumfang
 
@@ -32,19 +30,10 @@ Es ermöglicht die vollständige Steuerung (Schalten, Dimmen, Farbe, Farbtempera
   * Import von Szenen aus IP-Symcon Variablen-Profilen.
 * **Rückmeldung**: Senden von Status, Helligkeit, Farbe und Farbtemperatur zurück auf den KNX-Bus (Status-Objekte).
 
-### 2. Voraussetzungen
-
-- IP-Symcon ab Version 8.1
-- Installiertes und konfiguriertes Philips Hue Modul (oder kompatibel).
-
-### 3. Software-Installation
-(Aktuell nur über ein Manueles kopieren der dateien in den Modul Order der Symcon-Installation)
-* Über den Module Store das 'KnxControls'-Modul installieren.
-* Alternativ über das Module Control die URL des Repositories hinzufügen.
-
-### 4. Einrichten der Instanzen in IP-Symcon
+### 2. Einrichten der Instanzen in IP-Symcon
 
  Unter 'Instanz hinzufügen' kann das 'KnxControlsHue'-Modul mithilfe des Schnellfilters gefunden werden.  
+ (Voraussetzung: Ein installiertes und konfiguriertes Philips Hue Modul)
 	- Weitere Informationen zum Hinzufügen von Instanzen in der [Dokumentation der Instanzen](https://www.symcon.de/service/dokumentation/konzepte/instanzen/#Instanz_hinzufügen)
 
 __Konfigurationsseite__:
@@ -62,19 +51,19 @@ __Konfigurationsseite__:
 | **Szenen Zuordnung** | Tabelle, die KNX-Szenennummern den Hue-Werten (Farbe, Helligkeit) zuordnet. |
 | **Rückmelde Variablen** | Hier können KNX-Instanzen/Variablen hinterlegt werden, auf die der aktuelle Status der Hue Lampe gesendet wird (z.B. für Visu oder LED-Feedback am Taster). |
 
-### 5. Statusvariablen und Profile
+### 3. Statusvariablen und Profile
 
 Das Modul selbst legt keine eigenen Statusvariablen zur Anzeige an, sondern verknüpft bestehende KNX-Variablen mit der Hue-Instanz.
 Es werden Timer für die Dimm-Funktionen intern verwaltet.
 
-### 6. WebFront
+### 4. WebFront
 
 Das Modul dient primär der Logik im Hintergrund. Die Visualisierung erfolgt über die Hue-Instanz selbst oder die verknüpften KNX-Elemente.
 
-### 7. PHP-Befehlsreferenz
+### 5. PHP-Befehlsreferenz
 
 Das Modul arbeitet ereignisbasiert. Es gibt keine spezifischen Befehle für den Endanwender, die im Skript genutzt werden müssen.
 
-### 8. Hinweis
+### 6. Hinweis
 
 Dieser Code wurde zum großen Teil mit Hilfe von KI-Assistenz erstellt.

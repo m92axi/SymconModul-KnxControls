@@ -452,9 +452,15 @@ class KnxControlsHue extends IPSModule
         // Try to find Color and Brightness variables
         $colorID = @IPS_GetObjectIDByIdent("color", $hueInstanceID);
         $brightnessID = @IPS_GetObjectIDByIdent("brightness", $hueInstanceID);
+        $statusID = @IPS_GetObjectIDByIdent("on", $hueInstanceID);
 
         $color = ($colorID !== false) ? GetValue($colorID) : 0;
         $brightness = ($brightnessID !== false) ? GetValue($brightnessID) : 0;
+
+        // Wenn die Lampe ausgeschaltet ist, speichern wir Helligkeit 0
+        if ($statusID !== false && !GetValueBoolean($statusID)) {
+            $brightness = 0;
+        }
 
         $this->SendDebug("SaveHueScene", "Saving Scene $knxSceneNumber: Color=$color, Brightness=$brightness", 0);
 
