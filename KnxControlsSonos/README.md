@@ -4,13 +4,11 @@ Dieses Modul verbindet KNX-Taster/Sensoren mit einer Sonos-Instanz in IP-Symcon.
 ### Inhaltsverzeichnis
 
 1. [Funktionsumfang](#1-funktionsumfang)
-2. [Voraussetzungen](#2-voraussetzungen)
-3. [Software-Installation](#3-software-installation)
-4. [Einrichten der Instanzen in IP-Symcon](#4-einrichten-der-instanzen-in-ip-symcon)
-5. [Statusvariablen und Profile](#5-statusvariablen-und-profile)
-6. [WebFront](#6-webfront)
-7. [PHP-Befehlsreferenz](#7-php-befehlsreferenz)
-8. [Hinweis](#8-hinweis)
+2. [Einrichten der Instanzen in IP-Symcon](#2-einrichten-der-instanzen-in-ip-symcon)
+3. [Statusvariablen und Profile](#3-statusvariablen-und-profile)
+4. [WebFront](#4-webfront)
+5. [PHP-Befehlsreferenz](#5-php-befehlsreferenz)
+6. [Hinweis](#6-hinweis)
 
 ### 1. Funktionsumfang
 
@@ -24,18 +22,7 @@ Dieses Modul verbindet KNX-Taster/Sensoren mit einer Sonos-Instanz in IP-Symcon.
 * **Rückmeldung**: Senden von Status (Play/Pause), Mute und Lautstärke (%) zurück auf den KNX-Bus.
 * **Besonderheiten**: Logik zur Vermeidung von Rückkopplungsschleifen bei der Lautstärkeänderung und Timer für relatives Dimmen.
 
-### 2. Voraussetzungen
-
-- IP-Symcon ab Version 8.1
-
-### 3. Software-Installation
-
-* Über den Module Store das 'KnxControlsSonos'-Modul installieren.
-* Alternativ über das Module Control folgende URL hinzufügen
-* Über den Module Store das 'KnxControls'-Modul installieren.
-* Alternativ über das Module Control die URL des Repositories hinzufügen.
-
-### 4. Einrichten der Instanzen in IP-Symcon
+### 2. Einrichten der Instanzen in IP-Symcon
 
  Unter 'Instanz hinzufügen' kann das 'KnxControlsSonos'-Modul mithilfe des Schnellfilters gefunden werden.  
 	- Weitere Informationen zum Hinzufügen von Instanzen in der [Dokumentation der Instanzen](https://www.symcon.de/service/dokumentation/konzepte/instanzen/#Instanz_hinzufügen)
@@ -57,18 +44,18 @@ __Konfigurationsseite__:
 | **Stations-Szenen-Zuordnung** | Zuordnung von KNX-Szenennummern zu Sonos-Favoriten/Sendern. |
 | **Benachrichtigungsklänge URL Szenen-Zuordnung** | Zuordnung von KNX-Szenennummern zu Audio-URLs (z.B. MP3) für Benachrichtigungen. |
 
-### 5. Statusvariablen und Profile
+### 3. Statusvariablen und Profile
 
 Das Modul selbst legt keine eigenen Statusvariablen zur Anzeige an, sondern verknüpft bestehende KNX-Variablen mit der Sonos-Instanz.
 
-### 6. Visualisierung
+### 4. Visualisierung
 
 Das Modul dient primär der Logik im Hintergrund. Die Visualisierung erfolgt über die Sonos-Instanz selbst oder die verknüpften KNX-Elemente.
 
-### 7. PHP-Befehlsreferenz
+### 5. PHP-Befehlsreferenz
 
 Das Modul arbeitet ereignisbasiert. Es gibt keine spezifischen Befehle für den Endanwender, die im Skript genutzt werden müssen.
 
-### 8. Hinweis
+### 6. Hinweis
 
 Dieser Code wurde zum großen Teil mit Hilfe von KI-Assistenz erstellt.
