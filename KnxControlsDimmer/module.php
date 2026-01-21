@@ -17,6 +17,7 @@ class KnxControlsDimmer extends IPSModule
         // KNX Inputs
         $this->RegisterPropertyString("KnxSceneInputs", "[]");
         $this->RegisterPropertyString("KnxSwitchInputs", "[]");
+        $this->RegisterPropertyString("KnxAbsoluteInputs", "[]");
         $this->RegisterPropertyString("KnxDimInputs", "[]");
         $this->RegisterPropertyInteger("DimStep", 5); // 5% step
         $this->RegisterPropertyInteger("DimInterval", 200);
@@ -101,6 +102,12 @@ class KnxControlsDimmer extends IPSModule
             if (!empty($input['SwitchID'])) $this->RegisterMessage($input['SwitchID'], VM_UPDATE);
         }
 
+        // Register KNX Absolute inputs
+        $knxAbsoluteInputs = json_decode($this->ReadPropertyString("KnxAbsoluteInputs"), true);
+        foreach ($knxAbsoluteInputs as $input) {
+            if (!empty($input['AbsoluteID'])) $this->RegisterMessage($input['AbsoluteID'], VM_UPDATE);
+        }
+
         // Register KNX Dim inputs
         $knxDimInputs = json_decode($this->ReadPropertyString("KnxDimInputs"), true);
         foreach ($knxDimInputs as $input) {
@@ -151,6 +158,15 @@ class KnxControlsDimmer extends IPSModule
         foreach ($knxSwitchInputs as $input) {
             if ($SenderID == ($input['SwitchID'] ?? 0)) {
                 $this->HandleSwitch((bool)$data[0]);
+                return;
+            }
+        }
+
+        // Absolute Inputs
+        $knxAbsoluteInputs = json_decode($this->ReadPropertyString("KnxAbsoluteInputs"), true);
+        foreach ($knxAbsoluteInputs as $input) {
+            if ($SenderID == ($input['AbsoluteID'] ?? 0)) {
+                $this->HandleAbsoluteBrightness((int)$data[0]);
                 return;
             }
         }
@@ -246,6 +262,39 @@ class KnxControlsDimmer extends IPSModule
         $statusVarID = $this->ReadPropertyInteger("StatusVariableID");
         if ($statusVarID > 0) {
             RequestAction($statusVarID, $value);
+        }
+    }
+
+    private function HandleAbsoluteBrightness(int $value)
+    {
+        $brightnessVarID = $this->ReadPropertyInteger("BrightnessVariableID");
+        $statusVarID = $this->ReadPropertyInteger("StatusVariableID");
+
+        if ($brightnessVarID <= 0) return;
+
+        $max = $this->ReadPropertyInteger("MaxBrightnessValue");
+        
+        // Logic: If Max > 100, assume KNX input is 0-100% and scale up.
+        $targetValue = $value;
+        if ($max > 100) {
+            $targetValue = intval(($value / 100) * $max);
+        }
+        
+        if ($targetValue > $max) $targetValue = $max;
+        if ($targetValue < 0) $targetValue = 0;
+
+        $this->SendDebug(__FUNCTION__, "KNX: $value -> Target: $targetValue", 0);
+
+        if ($targetValue > 0) {
+            RequestAction($brightnessVarID, $targetValue);
+            if ($statusVarID > 0 && !GetValueBoolean($statusVarID)) {
+                RequestAction($statusVarID, true);
+            }
+        } else {
+            if ($statusVarID > 0 && GetValueBoolean($statusVarID)) {
+                RequestAction($statusVarID, false);
+            }
+            RequestAction($brightnessVarID, 0);
         }
     }
 

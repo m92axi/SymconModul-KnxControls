@@ -24,7 +24,9 @@
             "Number": "Nummer",
             "Station Name": "Sender Name",
             "Notification Sounds URL Scene Number Mapping": "Benachrichtigungsklänge URL Szenen-Zuordnung",
-            "Volume Change": "Lautstärkeänderung"
+            "Volume Change": "Lautstärkeänderung",
+            "This module is free for non-commercial use. If you like it and want to support my work,": "Das Modul ist für die nicht kommerzielle Nutzung kostenlos. Wenn es Ihnen gefällt und Sie meine Arbeit unterstützen möchten,",
+            "I would be happy about a small donation ☕": "freue ich mich über eine kleine Spende ☕"
             
         },
         "fr": {

@@ -27,7 +27,9 @@
             "Brightness": "Helligkeit",
             "KNX Feedback": "KNX Rückmeldung",
             "Status Feedback Variable (Bit)": "Status Rückmelde Variable (Bit)",
-            "Brightness Feedback Variable (Byte, 0-100%)": "Helligkeits Rückmelde Variable (Byte, 0-100%)"
+            "Brightness Feedback Variable (Byte, 0-100%)": "Helligkeits Rückmelde Variable (Byte, 0-100%)",
+            "This module is free for non-commercial use. If you like it and want to support my work,": "Das Modul ist für die nicht kommerzielle Nutzung kostenlos. Wenn es Ihnen gefällt und Sie meine Arbeit unterstützen möchten,",
+            "I would be happy about a small donation ☕": "freue ich mich über eine kleine Spende ☕"
         },
         "fr": {
             "KnxControlsDimmer": "KnxControlsDimmer",
@@ -56,7 +58,9 @@
             "Brightness": "Luminosité",
             "KNX Feedback": "Retour KNX",
             "Status Feedback Variable (Bit)": "Variable Retour Statut (Bit)",
-            "Brightness Feedback Variable (Byte, 0-100%)": "Variable Retour Luminosité (Octet, 0-100%)"
+            "Brightness Feedback Variable (Byte, 0-100%)": "Variable Retour Luminosité (Octet, 0-100%)",
+            "This module is free for non-commercial use. If you like it and want to support my work,": "Ce module est gratuit pour une utilisation non commerciale. Si vous l'aimez et souhaitez soutenir mon travail,",
+            "I would be happy about a small donation ☕": "je serais heureux d'un petit don ☕"
         },
         "es": {
             "KnxControlsDimmer": "KnxControlsDimmer",
@@ -85,7 +89,9 @@
             "Brightness": "Brillo",
             "KNX Feedback": "Retroalimentación KNX",
             "Status Feedback Variable (Bit)": "Variable Retroalimentación Estado (Bit)",
-            "Brightness Feedback Variable (Byte, 0-100%)": "Variable Retroalimentación Brillo (Byte, 0-100%)"
+            "Brightness Feedback Variable (Byte, 0-100%)": "Variable Retroalimentación Brillo (Byte, 0-100%)",
+            "This module is free for non-commercial use. If you like it and want to support my work,": "Este módulo es gratuito para uso no comercial. Si le gusta y desea apoyar mi trabajo,",
+            "I would be happy about a small donation ☕": "me alegraría recibir una pequeña donación ☕"
         }
     }
 }

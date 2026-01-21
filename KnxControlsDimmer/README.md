@@ -15,6 +15,7 @@ Es ermöglicht die vollständige Steuerung (Schalten, Dimmen) sowie eine komfort
 
 * **Schalten**: An/Aus über KNX (DPT 1.001).
 * **Dimmen**:
+  * Absolute Helligkeit über KNX (DPT 5.001).
   * Relatives Dimmen über KNX DPT 3.007 (Dimming Control).
   * Unterstützung für 1-Tasten-Dimmen durch Rückmeldung der Dimm-Richtung.
   * Konfigurierbare Dimm-Geschwindigkeit und Schrittweite.
@@ -37,6 +38,7 @@ __Konfigurationsseite__:
 | **Max. Brightness Value** | Der maximale Wert der Helligkeits-Variable (z.B. 100 für Prozent oder 255 für 8-Bit-Werte). |
 | **KNX Szenen Eingänge** | Liste von KNX-Variablen für die Szenennummer. Optional mit Steuerungs-Variable für den Lern-Modus. |
 | **KNX Schalt Eingänge** | Liste von KNX-Variablen (Bit) für An/Aus. |
+| **KNX Absolut Eingänge** | Liste von KNX-Variablen (Byte) für absolute Helligkeit (0-100% oder 0-255). |
 | **KNX Dimm Eingänge** | Konfiguration für relatives Dimmen (DPT 3.007). |
 | **Dimm Einstellungen** | Schrittweite und Intervall für die Dimm-Rampe. |
 | **Szenen Zuordnung** | Tabelle, die KNX-Szenennummern den Helligkeitswerten zuordnet. |
