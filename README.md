@@ -9,6 +9,7 @@ Folgende Module beinhaltet diese Bibliothek:
 
 - KnxControlsSonos ([Dokumentation](KnxControlsSonos))
 - KnxControlsHue ([Dokumentation](KnxControlsHue))
+- KnxControlsDimmer ([Dokumentation](KnxControlsDimmer))
 
 ## Voraussetzungen
 

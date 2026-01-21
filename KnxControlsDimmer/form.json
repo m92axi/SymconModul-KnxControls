@@ -4,9 +4,9 @@
             "type": "ExpansionPanel",
             "caption": "Target Device",
             "items": [
-                { "type": "SelectVariable", "name": "StatusVariableID", "caption": "Status Variable (Boolean)" },
-                { "type": "SelectVariable", "name": "BrightnessVariableID", "caption": "Brightness Variable (Integer)" },
-                { "type": "NumberSpinner", "name": "MaxBrightnessValue", "caption": "Max. Brightness Value", "suffix": "(e.g. 100 or 255)", "width": "200px" }
+                { "type": "SelectVariable", "name": "StatusVariableID", "caption": "Status Variable (Boolean)" , "width": "40%" },
+                { "type": "SelectVariable", "name": "BrightnessVariableID", "caption": "Brightness Variable (Integer)" , "width": "40%" },
+                { "type": "NumberSpinner", "name": "MaxBrightnessValue", "caption": "Max. Brightness Value", "suffix": "(e.g. 100 or 255)", "width": "40%" }
             ]
         },
         {
@@ -21,8 +21,8 @@
                     "add": true,
                     "delete": true,
                     "columns": [
-                        { "name": "SceneNumberID", "caption": "Scene Number Variable (Byte)", "width": "300px", "edit": { "type": "SelectVariable" } },
-                        { "name": "ControlID", "caption": "Control Variable (Bit, optional for saving)", "width": "300px", "edit": { "type": "SelectVariable" } }
+                        { "name": "SceneNumberID", "caption": "Scene Number Variable (Byte)", "width": "45%", "add": 0, "edit": { "type": "SelectVariable" } },
+                        { "name": "ControlID", "caption": "Control Variable (Bit, optional for saving)", "width": "45%", "add": 0, "edit": { "type": "SelectVariable" } }
                     ]
                 },
                 {
@@ -32,7 +32,7 @@
                     "add": true,
                     "delete": true,
                     "columns": [
-                        { "name": "SwitchID", "caption": "Switch Variable (Bit)", "width": "300px", "edit": { "type": "SelectVariable" } }
+                        { "name": "SwitchID", "caption": "Switch Variable (Bit)", "width": "90%", "add": 0, "edit": { "type": "SelectVariable" } }
                     ]
                 },
                 {
@@ -42,11 +42,19 @@
                     "add": true,
                     "delete": true,
                     "columns": [
-                        { "name": "DimStepID", "caption": "Step/Stop Variable (4-Bit)", "width": "250px", "edit": { "type": "SelectVariable" } },
-                        { "name": "DimDirectionID", "caption": "Direction Variable (1-Bit)", "width": "250px", "edit": { "type": "SelectVariable" } },
-                        { "name": "DimSwitchDirectionID", "caption": "Switch Direction (optional)", "width": "250px", "edit": { "type": "SelectVariable" } }
+                        { "name": "DimStepID", "caption": "Step/Stop Variable (4-Bit)", "width": "30%", "add": 0, "edit": { "type": "SelectVariable" } },
+                        { "name": "DimDirectionID", "caption": "Direction Variable (1-Bit)", "width": "30%", "add": 0, "edit": { "type": "SelectVariable" } },
+                        { "name": "DimSwitchDirectionID", "caption": "Switch Direction (optional)", "width": "30%", "add": 0, "edit": { "type": "SelectVariable" } }
                     ]
                 }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "KNX Feedback",
+            "items": [
+                { "type": "SelectVariable", "name": "KnxFeedbackStatusID", "caption": "Status Feedback Variable (Bit)" },
+                { "type": "SelectVariable", "name": "KnxFeedbackBrightnessID", "caption": "Brightness Feedback Variable (Byte, 0-100%)" }
             ]
         },
         {
@@ -66,20 +74,13 @@
                     "delete": true,
                     "sort": { "column": "KnxNumber", "direction": "ascending" },
                     "columns": [
-                        { "name": "Active", "caption": "Active", "width": "80px", "edit": { "type": "CheckBox" } },
-                        { "name": "KnxNumber", "caption": "KNX Scene Number", "width": "150px", "edit": { "type": "NumberSpinner" } },
-                        { "name": "Brightness", "caption": "Brightness", "width": "150px", "edit": { "type": "NumberSpinner" } }
+                        { "name": "Active", "caption": "Active", "width": "10%", "add": true, "edit": { "type": "CheckBox" } },
+                        { "name": "KnxNumber", "caption": "KNX Scene Number", "width": "40%", "add": 1, "edit": { "type": "NumberSpinner" } },
+                        { "name": "Brightness", "caption": "Brightness", "width": "40%", "add": 0, "edit": { "type": "NumberSpinner" } }
                     ]
                 }
             ]
-        },
-        {
-            "type": "ExpansionPanel",
-            "caption": "KNX Feedback",
-            "items": [
-                { "type": "SelectVariable", "name": "KnxFeedbackStatusID", "caption": "Status Feedback Variable (Bit)" },
-                { "type": "SelectVariable", "name": "KnxFeedbackBrightnessID", "caption": "Brightness Feedback Variable (Byte, 0-100%)" }
-            ]
         }
+        
     ]
 }

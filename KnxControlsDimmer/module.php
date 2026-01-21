@@ -59,13 +59,13 @@ class KnxControlsDimmer extends IPSModule
         }
 
         foreach ($form['elements'] as &$element) {
-            if (isset($element['name']) && $element['name'] == 'SettingsPanel') {
+            if ($element['type'] == 'ExpansionPanel') {
                 foreach ($element['items'] as &$item) {
                     if (count($options) > 0 && isset($item['name']) && $item['name'] == 'SceneMapping') {
                         foreach ($item['columns'] as &$column) {
                             if ($column['name'] == 'KnxNumber') {
                                 $column['edit'] = ['type' => 'Select', 'options' => $options];
-                                $column['width'] = '250px';
+                                $column['width'] = '40%';
                             }
                         }
                     }

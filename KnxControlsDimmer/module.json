@@ -1,0 +1,11 @@
+{
+    "id": "{462F76D2-9592-403C-9306-E8C79C62F3C2}",
+    "name": "KnxControlsDimmer",
+    "type": 3,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "KCD"
+}
