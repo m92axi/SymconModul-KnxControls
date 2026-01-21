@@ -1,7 +1,7 @@
 # KnxControls
 
 [![Version](https://img.shields.io/badge/Symcon-PHP--Bibliothek-purple.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
-[![Product](https://img.shields.io/badge/Symcon%20Version-5.0-blue.svg)](https://www.symcon.de/produkt/)
+[![Product](https://img.shields.io/badge/Symcon%20Version-5.3-blue.svg)](https://www.symcon.de/produkt/)
 
 Diese Modulbibliothek stellt verschiedene Erweiterungen bereit, um Geräte mit KNX zu verknüpfen
 
