@@ -425,8 +425,8 @@ class KnxControlsSonos extends IPSModule
         if ($type == 0) { // Status
             $id = $this->ReadPropertyInteger('KNX_StatusFeedback');
             if ($id > 0 && IPS_VariableExists($id)) {
-                // Sonos: 1=Playing. Map to KNX Bool (True=Play)
-                $isPlaying = ($value == 1); 
+                // Sonos: 2=Playing. Map to KNX Bool (True=Play)
+                $isPlaying = ($value == 2); 
                 if (GetValue($id) != $isPlaying) {
                     RequestAction($id, $isPlaying);
                 }
